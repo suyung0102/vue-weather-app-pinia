@@ -6,10 +6,9 @@ import { useStore } from "./store/store";
 import { storeToRefs } from "pinia";
 
 const store = useStore();
-const { weatherData, toggle } = storeToRefs(store);
+const { toggle } = storeToRefs(store);
 
 onMounted(() => {
-  // store.dispatch("getWeather");
   store.getWeather();
 });
 </script>
